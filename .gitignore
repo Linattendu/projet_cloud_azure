@@ -1,0 +1,19 @@
+# Ignorer tous les fichiers dans le dossier data
+data/
+
+# Ignorer les fichiers spécifiques
+*.tsv
+*.pkl
+
+# Ignorer les fichiers temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers de configuration IDE
+.vscode/
+*.pyc
+__pycache__/
+
+# Ignorer les fichiers de l'environnement virtuel
+venv/
+.env

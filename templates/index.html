@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/index.css">
+    <title>Quiz: Find Your Ideal Movie</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz: Find Your Ideal Movie</h1>
+        <form method="POST" action="/submit_quiz">
+            <!-- Emotion -->
+            <label for="emotion">What emotion do you want to feel?</label>
+            <select id="emotion" name="emotion" required>
+                <option value="Comedy">Laughter</option>
+                <option value="Thriller">Suspense</option>
+                <option value="Drama">Inspiration</option>
+            </select>
+
+            <!-- Narrative Theme -->
+            <label for="theme">What theme interests you the most?</label>
+            <select id="theme" name="theme" required>
+                <option value="time travel">Time Travel</option>
+                <option value="survival">Survival in Nature</option>
+                <option value="justice">Justice and Redemption</option>
+            </select>
+
+            <!-- Setting -->
+            <label for="setting">What environment would you like to be transported to?</label>
+            <select id="setting" name="setting" required>
+                <option value="space">Futuristic Space</option>
+                <option value="nature">Wild Nature</option>
+                <option value="urban">Urban</option>
+            </select>
+
+            <button type="submit">Find a Movie</button>
+        </form>
+    </div>
+</body>
+</html>

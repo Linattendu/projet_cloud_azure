@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/results.css">
+    <title>Movie Recommendations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Movie Recommendations</h1>
+        {% if results %}
+            <ul>
+                {% for movie in results %}
+                    <li>
+                        <a href="https://www.imdb.com/title/{{ movie['Id'] }}/?ref_=fn_all_ttl_1" target="_blank" class="movie-title">
+                            {{ movie['Title'] }}
+                        </a>
+                        <span class="rating">(Rating: {{ movie['Rating'] }})</span>
+                        <p class="overview">{{ movie['overview'] }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-results">No movies match your preferences. Try again with different choices.</p>
+        {% endif %}
+        <a href="/" class="back-link">Take the Quiz Again</a>
+    </div>
+</body>
+</html>
